@@ -1,0 +1,51 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bar-width: 0%;
+  --bar-height: {{goalBarHeight}}px;
+  --bar-top-margin: {{barTopMargin}}px;
+  --edge-spacing: {{edgeSpacing}}px;
+}
+
+.sub-goal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px var(--edge-spacing) calc(var(--bar-height) + var(--bar-top-margin)) var(--edge-spacing);
+  position: relative;
+  width: 100%;
+}
+.sub-goal-container::before {
+  background-color: {{goalBarColor}};
+  content: "";
+  height: {{goalBarHeight}}px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /*transition: width 500ms linear;*/
+  width: var(--bar-width);
+}
+
+.sub-goal-container.transition::before {
+  transition: width {{barMovementSpeed}}ms linear;
+}
+
+.sub-goal__current-subs, .sub-goal__goal-number {
+  font-size: {{goalFontSize}}px;
+}
+
+.sub-goal__current-subs {
+	color: {{subColor}};
+}
+
+.sub-goal__goal-number {
+	color: {{subGoalColor}};
+}
