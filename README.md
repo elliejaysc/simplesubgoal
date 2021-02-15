@@ -1,4 +1,4 @@
-# simplesubgoal
+# Simples Subscriber Goal Stream Elements Overlay
 
 1.) Go to your Stream Elements dashboard & create a new blank overlay in My Overlays.
 
