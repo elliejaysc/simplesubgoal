@@ -1,0 +1,67 @@
+{
+  "subGoal": {
+    "type": "number",
+    "label": "Subscriber Goal",
+    "value": 5,
+    "step": 1,
+    "min": 0
+  },
+    "goalFontSize": {
+    "type": "number",
+    "min": 0,
+    "step": 1,
+    "label": "Subscriber & Goal Font Size",
+    "value": 48,
+	"group": "Subscriber & Goal Display Options"
+  },
+   "subGoalColor": {
+    "type": "colorpicker",
+    "label": "Subscriber Goal Font Color",
+    "value": "rgba(0, 0, 0, 1)",
+    "group": "Subscriber & Goal Display Options"
+  },
+   "subColor": {
+    "type": "colorpicker",
+    "label": "Current Subs Font Color",
+    "value": "rgba(0, 0, 0, 1)",
+    "group": "Subscriber & Goal Display Options"
+  },
+  "edgeSpacing": {
+    "type": "number",
+    "min": 0,
+    "step": 1,
+    "label": "Outer edge spacing",
+    "value": 10,
+    "group": "Subscriber & Goal Display Options"
+  },
+   "goalBarHeight": {
+    "type": "number",
+    "min": 0,
+    "step": 1,
+    "label": "Subscriber Goal Bar Height",
+    "value": 20,
+    "group": "Subscriber Goal Bar Options"
+  },
+  "barTopMargin": {
+    "type": "number",
+    "min": 0,
+    "step": 1,
+    "label": "Subscriber Goal Bar Top Margin",
+    "value": 20,
+	"group": "Subscriber Goal Bar Options"
+  },
+   "barMovementSpeed": {
+    "type": "number",
+    "min": 0,
+    "step": 100,
+    "label": "Subscriber Goal Bar Speed",
+    "value": 500,
+	"group": "Subscriber Goal Bar Options"
+  },
+  "goalBarColor": {
+    "type": "colorpicker",
+    "label": "Subscriber Goal Bar Color",
+    "value": "rgba(255, 0, 0, 1)",
+	"group": "Subscriber Goal Bar Options"
+  }
+ }
