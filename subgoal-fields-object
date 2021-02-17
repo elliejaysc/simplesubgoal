@@ -34,6 +34,16 @@
     "value": 10,
     "group": "Subscriber & Goal Display Options"
   },
+  "goalBarPosition": {
+    "type": "dropdown",
+    "label": "Goal Bar Position",
+    "value": "bottom",
+    "options": {
+      "bottom": "Bottom",
+      "top": "Top"
+    },
+    "group": "Subscriber Goal Bar Options"
+  },
    "goalBarHeight": {
     "type": "number",
     "min": 0,
