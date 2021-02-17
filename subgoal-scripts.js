@@ -9,10 +9,15 @@ window.addEventListener('onWidgetLoad', function (obj) {
   	const fieldData = obj.detail.fieldData;
   	subs = obj.detail.session.data["subscriber-total"].count;
   	goal = fieldData.subGoal;
+  	position = fieldData.goalBarPosition;
   	currentSubs.innerText = subs;
   	goalValue.innerText = goal;
   
   	subBar.style.setProperty('--bar-width', (subs/goal * 100) + '%');
+  	
+  	console.log(position);
+  	if(position === "top")
+  		subBar.classList.add("top");
   
   	setTimeout(() => { subBar.classList.add("transition"); }, 500);
 });
@@ -32,4 +37,3 @@ window.addEventListener('onEventReceived', function (obj) {
       	subBar.style.setProperty('--bar-width', (subs/goal * 100) + '%');
     }
 });
-
