@@ -23,3 +23,8 @@
 You should also have all of your setup options on the left.
 
 Most of the options are self explanatory. The one that might be slightly confusing is the **Subscriber Goal Bar Speed**.  This is how fast or slow the bar moves after a new sub comes in.  It is set in milliseconds and the higher the number the slower the bar will move.
+
+
+# Change Log
+
+2021-02-16: Added new control to allow selection of the bar position, either over the numbers at the top or below the numbers at the bottom.  Bottom position is default.
