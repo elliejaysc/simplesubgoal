@@ -30,12 +30,20 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  /*transition: width 500ms linear;*/
   width: var(--bar-width);
+  z-index: -1;
 }
 
 .sub-goal-container.transition::before {
   transition: width {{barMovementSpeed}}ms linear;
+}
+
+.sub-goal-container.top {
+  padding: calc(var(--bar-height) + var(--bar-top-margin)) var(--edge-spacing) 20px var(--edge-spacing);
+}
+.sub-goal-container.top::before {
+  top: 0;
+  bottom: unset;
 }
 
 .sub-goal__current-subs, .sub-goal__goal-number {
