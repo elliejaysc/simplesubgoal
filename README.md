@@ -28,3 +28,8 @@ Most of the options are self explanatory. The one that might be slightly confusi
 # Change Log
 
 **2021-02-16**: Added new control to allow selection of the bar position, either over the numbers at the top or below the numbers at the bottom.  Bottom position is default.
+
+# Images
+
+[Sub Goal](subgoal1.png)
+[Sub Goal Controls](subgoal2.png)
