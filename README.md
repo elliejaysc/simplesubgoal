@@ -31,5 +31,6 @@ Most of the options are self explanatory. The one that might be slightly confusi
 
 # Images
 
-[Sub Goal](subgoal1.png)
-[Sub Goal Controls](subgoal2.png)
+![Sub Goal](subgoal1.png)
+
+![Sub Goal Controls](subgoal2.png)
