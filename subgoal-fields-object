@@ -6,6 +6,17 @@
     "step": 1,
     "min": 0
   },
+  "subPeriod": {
+    "type": "dropdown",
+    "label": "Subscription Time Period",
+    "value": "allTime",
+    "options": {
+      "session": "Session",
+      "week": "Week",
+	  "month": "Month",
+	  "allTime":"All Time"
+    }
+  },
     "goalFontSize": {
     "type": "number",
     "min": 0,
