@@ -7,15 +7,40 @@ let subs, goal;
 window.addEventListener('onWidgetLoad', function (obj) {
   
   	const fieldData = obj.detail.fieldData;
-  	subs = obj.detail.session.data["subscriber-total"].count;
+  	//subs = obj.detail.session.data["subscriber-total"].count;
+    data = obj.detail.session.data;
   	goal = fieldData.subGoal;
   	position = fieldData.goalBarPosition;
+    period = fieldData.subPeriod;
+  	subs = 0;
+  
+  	switch (period) {
+	  case "session":
+    	subs = data["subscriber-session"]["count"];
+		console.log(data["subscriber-session"]["count"]);
+	    break;
+      case "week":
+    	subs = data["subscriber-week"]["count"];
+		console.log(data["subscriber-week"]["count"]);
+	    break;
+      case "month":
+    	subs = data["subscriber-month"]["count"];
+        		console.log(data["subscriber-month"]["count"]);
+	    break;        
+      case "allTime":
+    	subs = data["subscriber-total"].count;
+        		console.log(data["subscriber-month"]["count"]);
+	    break;
+    }
+  
+  
   	currentSubs.innerText = subs;
   	goalValue.innerText = goal;
   
+  	//console.log("Session Subs: " + sessionSubs);
+  
   	subBar.style.setProperty('--bar-width', (subs/goal * 100) + '%');
   	
-  	console.log(position);
   	if(position === "top")
   		subBar.classList.add("top");
   
@@ -30,6 +55,8 @@ window.addEventListener('onEventReceived', function (obj) {
     const listener = obj.detail.listener.split("-")[0];
     const event = obj.detail.event;
   
+  	console.log(obj);
+  
 	if (listener === 'subscriber') {
         subs = parseInt(subs)+1;
       	currentSubs.innerText = subs;
@@ -37,3 +64,4 @@ window.addEventListener('onEventReceived', function (obj) {
       	subBar.style.setProperty('--bar-width', (subs/goal * 100) + '%');
     }
 });
+
