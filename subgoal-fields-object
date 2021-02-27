@@ -11,10 +11,10 @@
     "label": "Subscription Time Period",
     "value": "allTime",
     "options": {
-      "session": "Session",
-      "week": "Week",
-	  "month": "Month",
-	  "allTime":"All Time"
+      "session": "Current Session Subs",
+      "week": "Subs in the last 7 days",
+	  "month": "Subs in the last 30 days",
+	  "allTime":"Total Subs"
     }
   },
     "goalFontSize": {
