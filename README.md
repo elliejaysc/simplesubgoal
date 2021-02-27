@@ -27,6 +27,8 @@ Most of the options are self explanatory. The one that might be slightly confusi
 
 # Change Log
 
+**2021-02-26**: Updated sub period labels for clarification.
+
 **2021-02-22**: Added new control to allow selection of the subscription period to include current session, weekly, monthly, & all time.  All time is the default setting.
 
 
