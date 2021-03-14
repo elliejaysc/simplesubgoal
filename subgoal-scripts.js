@@ -20,11 +20,11 @@ function checkSubs(period, data) {
 window.addEventListener('onWidgetLoad', function (obj) {
   
   	const fieldData = obj.detail.fieldData;
-    data = obj.detail.session.data;
+    	data = obj.detail.session.data;
   	goal = fieldData.subGoal;
   	position = fieldData.goalBarPosition;
-  	autoReset = fieldData.autoReset;
-    period = fieldData.subPeriod;
+  	//autoReset = fieldData.autoReset;
+    	period = fieldData.subPeriod;
   	subs = 0;
   
   	subs = checkSubs(period, data);
@@ -35,8 +35,8 @@ window.addEventListener('onWidgetLoad', function (obj) {
   
   	
   	/*if(autoReset === "yes") {
-    	subs = subs % goal;
-    }*/
+    		subs = subs % goal;
+    	}*/
   
   	currentSubs.innerText = subs;
   	goalValue.innerText = goal;
