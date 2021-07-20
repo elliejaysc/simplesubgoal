@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'AnimalSilence';
+  src: url('https://voidbase.com/fonts/AnimalSilence.woff') format('woff');
+}
+
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: {{fontName}}, san-serif;
     font-size: 14px;
     overflow: hidden;
 }
@@ -13,6 +18,9 @@
   --bar-height: {{goalBarHeight}}px;
   --bar-top-margin: {{barTopMargin}}px;
   --edge-spacing: {{edgeSpacing}}px;
+  --last-sub: "";
+  --last-sub-offset-right: 0px;
+  --last-sub-offset-left: initial;
 }
 
 .sub-goal-container {
@@ -30,12 +38,32 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  /*transition: width 500ms linear;*/
   width: var(--bar-width);
-  z-index: -1;
+}
+
+.sub-goal-container::after {
+  color: {{lastSubColor}};
+  content: var(--last-sub);
+  font-family: {{lastSubFont}}, sans-serif;
+  font-size: {{lastSubFontSize}}px;
+  font-weight: {{lastSubFontWeight}};
+  position: absolute;
+  right: calc(100% - var(--bar-width) + var(--last-sub-offset-right));
+  bottom: calc(var(--bar-height));
 }
 
 .sub-goal-container.transition::before {
   transition: width {{barMovementSpeed}}ms linear;
+}
+
+.sub-goal-container.transition::after {
+  transition: right {{barMovementSpeed}}ms linear;
+}
+
+.sub-goal-container.left::after {
+  left: var(--last-sub-offset-right);
+  right: unset;
 }
 
 .sub-goal-container.top {
@@ -48,6 +76,7 @@
 
 .sub-goal__current-subs, .sub-goal__goal-number {
   font-size: {{goalFontSize}}px;
+  font-weight: {{fontWeight}};
 }
 
 .sub-goal__current-subs {
@@ -56,4 +85,8 @@
 
 .sub-goal__goal-number {
 	color: {{subGoalColor}};
+}
+
+.animal, .animal::after {
+  font-family: 'AnimalSilence', sans-serif;
 }

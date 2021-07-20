@@ -27,6 +27,12 @@ Most of the options are self explanatory. The one that might be slightly confusi
 
 # Change Log
 
+**2021-07-20**: Feature Update!
+    - Added a new feature to allow the user to show the last Subscriber and have it track along the screen with the bar. This new feature comes with it own set of configuration fields found in the Last Subscriber Options section. 
+    - Created a Main Config group for the main configuration fields.
+    - Updated the Subscriber & Goal Display Options to now have a Google Font selector.
+    - Added a Custom Font field to the Subscriber & Goal Display Options & the Last Subscriber Options that can be populated with hosted fonts that are not Google Fonts. Custom fonts can be added upon request.
+
 **2021-03-14**: Added a 5 minute interval watcher for the sub count to keep it up to date if any subs fall off without needing to refresh the browser source.
 
 **2021-02-26**: Updated sub period labels for clarification.

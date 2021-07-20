@@ -2,9 +2,10 @@
   "subGoal": {
     "type": "number",
     "label": "Subscriber Goal",
-    "value": 5,
+    "value": 100,
     "step": 1,
-    "min": 0
+    "min": 0,
+    "group": "Main Config"
   },
   "subPeriod": {
     "type": "dropdown",
@@ -15,7 +16,44 @@
       "week": "Subs in the last 7 days",
 	  "month": "Subs in the last 30 days",
 	  "allTime":"Total Subs"
-    }
+    },
+    "group": "Main Config"
+  },
+  "showLastSub": {
+    "type": "dropdown",
+    "label": "Show the last subscriber:",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group": "Main Config"
+  },
+  "autoReset": {
+    "type": "dropdown",
+    "label": "Use auto reset:",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group": "Main Config"
+  },
+  "fontName": {
+    "label": "Subscriber & Goal Font",
+    "type": "googleFont",
+    "value": "Montserrat",
+    "group": "Subscriber & Goal Display Options"
+  },
+  "customFontName": {
+    "label": "Subscriber & Goal Custom Font",
+    "type": "dropdown",
+    "value": "none",
+    "options": {
+      "none": "None",
+      "animal": "Animal Silence"
+    },
+    "group": "Subscriber & Goal Display Options"
   },
     "goalFontSize": {
     "type": "number",
@@ -24,6 +62,20 @@
     "label": "Subscriber & Goal Font Size",
     "value": 48,
 	"group": "Subscriber & Goal Display Options"
+  },
+    "fontWeight": {
+    "label": "Subscriber & Goal Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "group": "Subscriber & Goal Display Options"
   },
    "subGoalColor": {
     "type": "colorpicker",
@@ -84,5 +136,49 @@
     "label": "Subscriber Goal Bar Color",
     "value": "rgba(255, 0, 0, 1)",
 	"group": "Subscriber Goal Bar Options"
+  },
+  "lastSubFont": {
+    "label": "Last Subscriber Font",
+    "type": "googleFont",
+    "value": "Montserrat",
+    "group": "Last Subscriber Options"
+  },
+    "lastSubCustomFont": {
+    "label": "Last Subscriber Custom Font",
+    "type": "dropdown",
+    "value": "none",
+    "options": {
+      "none": "None",
+      "animal": "Animal Silence"
+    },
+    "group": "Last Subscriber Options"
+  },
+    "lastSubFontSize": {
+    "type": "number",
+    "min": 0,
+    "step": 1,
+    "label": "Last Subscriber Font Size",
+    "value": 48,
+	"group": "Last Subscriber Options"
+  },
+    "lastSubFontWeight": {
+    "label": "Last Subscriber Font Weight",
+    "type": "dropdown",
+    "value": "400",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "group": "Last Subscriber Options"
+  },
+   "lastSubColor": {
+    "type": "colorpicker",
+    "label": "Last Subscriber Color",
+    "value": "rgba(0, 0, 0, 1)",
+    "group": "Last Subscriber Options"
   }
  }
